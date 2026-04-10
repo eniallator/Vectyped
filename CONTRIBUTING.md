@@ -1,6 +1,6 @@
-# Contributing to Tsvec
+# Contributing to Vectyped
 
-Thank you for your interest in contributing to Tsvec! This document provides guidelines and instructions for contributing to the project.
+Thank you for your interest in contributing to Vectyped! This document provides guidelines and instructions for contributing to the project.
 
 ## Code of Conduct
 
@@ -20,8 +20,8 @@ Please review and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md) in all int
 2. **Clone your fork** locally:
 
    ```bash
-   git clone https://github.com/YOUR-USERNAME/Tsvec.git
-   cd Tsvec
+   git clone https://github.com/YOUR-USERNAME/Vectyped.git
+   cd Vectyped
    ```
 
 3. **Install dependencies**:
@@ -196,4 +196,4 @@ When contributing features:
 
 Contributors will be recognized in release notes and git history. We appreciate all contributions, from code to documentation to bug reports!
 
-Thank you for helping make Tsvec better! 🎉
+Thank you for helping make Vectyped better! 🎉
