@@ -1,4 +1,4 @@
-# Vects
+# Tsvec
 
 Lightweight, TypeScript-first vector utilities. The package provides a robust `Vector` class with common vector operations, helpers, and strict runtime guards for safe usage.
 
