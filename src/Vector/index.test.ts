@@ -61,13 +61,18 @@ describe("Vector", () => {
     expect(v.toArray()).toEqual([1, 1]);
   });
 
-  it("min() and max() should work", () => {
+  it("min(), max(), clamp() should work", () => {
     expect(Vector.create(1, 5).min(Vector.create(3, 2)).toArray()).toEqual([
       1, 2,
     ]);
     expect(Vector.create(1, 5).max(Vector.create(3, 2)).toArray()).toEqual([
       3, 5,
     ]);
+    expect(
+      Vector.create(1, 5)
+        .clamp(Vector.create(3, 1), Vector.create(4, 3))
+        .toArray()
+    ).toEqual([3, 3]);
   });
 
   it("sum() should sum components", () => {

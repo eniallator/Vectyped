@@ -1,5 +1,6 @@
 import {
   cartesianToPolar,
+  clamp,
   polarToCartesian,
   positiveMod,
   raise,
@@ -259,6 +260,21 @@ export class Vector<N extends number | undefined = undefined> {
    */
   max(arg: VectorArg<N>): this {
     return this._applyOperation(Math.max, [arg]);
+  }
+
+  /**
+   * Sets this vector's components to the the max between the incoming arg and this vector's components
+   * @param {VectorArg<N>} min If given a number, it's used for all min clamp operations. If given a Vector, the clamp operation is component-wise
+   * @param {VectorArg<N>} max If given a number, it's used for all max clamp operations. If given a Vector, the clamp operation is component-wise
+   * @returns {this} this
+   */
+  clamp(min: VectorArg<N>, max: VectorArg<N>): this {
+    const minAt = this._argAccessor(min);
+    const maxAt = this._argAccessor(max);
+    this.cmps = toAnyComponents(this.cmps).map((n, i) =>
+      clamp(n, minAt(i), maxAt(i))
+    ) as Components<N>;
+    return this;
   }
 
   /**
